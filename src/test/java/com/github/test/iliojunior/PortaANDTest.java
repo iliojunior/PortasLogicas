@@ -1,3 +1,6 @@
+package com.github.test.iliojunior;
+
+import com.github.main.iliojunior.PortaAND;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertFalse;
