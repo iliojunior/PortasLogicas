@@ -1,6 +1,10 @@
 package com.github.main.iliojunior;
 
-public class PortaAND extends PortaLogica {
+public class PortaAND extends PortaMultipla {
+
+    public PortaAND() {
+        super();
+    }
 
     public PortaAND(int quantidadePortas) {
         super(quantidadePortas);

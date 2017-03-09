@@ -10,15 +10,20 @@ public abstract class PortaLogica {
     private ArrayList<Boolean> portas = new ArrayList<Boolean>();
 
     public PortaLogica(final int quantidadePortas) {
+        this(quantidadePortas, 1);
+    }
 
-        if (quantidadePortas < 2)
-            throw new RuntimeException("É necessário pelo menos 2 portas");
+    public PortaLogica(final int quantidadePortas, final int portasMinimo) {
+
+        if (quantidadePortas < portasMinimo)
+            throw new RuntimeException("É necessário pelo menos " + portasMinimo + " portas");
 
         inicializarPortas(quantidadePortas);
     }
 
     /**
      * Initialize ports
+     *
      * @param quantidadePortas
      */
     private void inicializarPortas(final int quantidadePortas) {
@@ -28,6 +33,7 @@ public abstract class PortaLogica {
 
     /**
      * Verify if exists port index
+     *
      * @param indexPorta - Port index for validate
      * @return Return true if port exists
      */
@@ -43,6 +49,7 @@ public abstract class PortaLogica {
     /**
      * Validade if exists port index
      * Throws PortNotFoundRuntimeException if port is invalid
+     *
      * @param entrada - Port index for validate
      * @return Return true if port is valid
      */
@@ -53,6 +60,7 @@ public abstract class PortaLogica {
 
     /**
      * Getter port attribute
+     *
      * @return Returns ports array
      */
     public ArrayList<Boolean> getPortas() {
@@ -62,6 +70,7 @@ public abstract class PortaLogica {
     /**
      * Liga a porta desejada.
      * Set status of the port as true.
+     *
      * @param entrada - Index of port to set as true.
      */
     public void ligarEntrada(int entrada) {
@@ -72,6 +81,7 @@ public abstract class PortaLogica {
     /**
      * Desliga a porta desejada.
      * Set status of the port as false.
+     *
      * @param entrada - Index of port to set as false.
      */
     public void desligarEntrada(int entrada) {
