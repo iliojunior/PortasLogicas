@@ -9,6 +9,6 @@ public abstract class PortaMultipla extends PortaLogica {
     }
 
     public PortaMultipla(int quantidadePortas) {
-        super(quantidadePortas);
+        super(quantidadePortas, PORTAS_MINIMAS);
     }
 }
