@@ -1,4 +1,4 @@
-package com.github.test.iliojunior;
+package com.github.main.iliojunior;
 
 import com.github.main.iliojunior.PortaAND;
 import org.junit.Test;
@@ -11,7 +11,7 @@ public class PortaANDTest {
     @Test
     public void validate() {
 
-        PortaAND porta = new PortaAND();
+        PortaAND porta = new PortaAND(2);
 
         assertFalse(porta.saida());
 
@@ -30,7 +30,7 @@ public class PortaANDTest {
     @Test
     public void validateTresPortas() {
 
-        final PortaAND porta = new PortaAND();
+        final PortaAND porta = new PortaAND(3);
 
         assertFalse(porta.saida());
 
@@ -51,7 +51,7 @@ public class PortaANDTest {
     @Test
     public void validateQuatroPortas() {
 
-        final PortaAND porta = new PortaAND();
+        final PortaAND porta = new PortaAND(4);
 
         assertFalse(porta.saida());
 
